@@ -1,0 +1,29 @@
+<!-- Page Content -->
+<div class="container minPageHeight">
+  <div class="row">
+     <div class="col-lg-12 text-center" style="padding-top: 20px;">
+        <div class="container" style="padding-left: 0px; padding-right: 0px;">
+           <div class="row">
+              <div class="col-sm" style="text-align: left;">
+                <h2>{{ issue.title }}</h2>
+              </div>
+              <div class="col-sm rowAlign" style="text-align: left;">
+                <h3 class="col-sm">{{ issue.state }}</h3>
+                <h3 class="col-sm"> - </h3>
+                <h3 class="col-sm">{{ issue.stateDate }}</h3>
+              </div>
+           </div>
+        </div>
+        <div class="container box">
+          <div class="row">
+            <textarea class="col col-lg-12" style="text-align: left;" readonly>{{ issue.issueText }}</textarea>
+          </div>
+          <div class="row">
+            <div class="col-2 rowAlign" style="text-align: right;">
+               <strong><h2>Responses: {{ issue.comments }}</h2></strong>
+            </div>
+         </div>
+        </div>
+     </div>
+  </div>
+</div>

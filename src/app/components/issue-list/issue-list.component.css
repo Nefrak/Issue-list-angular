@@ -1,0 +1,54 @@
+.leftText {
+  text-align: left !important;
+}
+
+.point {
+  cursor: pointer;
+}
+
+.table .thead-dark th {
+  color: rgb(215, 224, 231);
+}
+
+::ng-deep .mat-sort-header-arrow {
+  color: rgb(213, 213, 213);
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+  .container {
+    max-width: 1080px;
+  }
+}
+
+.paginator {
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+}
+
+.paginator /deep/ .ngx-pagination .current {
+  background: rgb(131, 131, 131);
+  border-radius: 4px;
+  padding-left: 9px;
+  padding-right: 9px;
+}
+
+.paginator /deep/ .ngx-pagination .ng-star-inserted {
+  color: aliceblue;
+}
+
+.paginator /deep/ .ngx-pagination.ng-star-inserted {
+  background-color: rgba(129, 129, 129, 0.23);
+}
+
+.paginator /deep/ .ngx-pagination a:hover, .ngx-pagination button:hover {
+  background: rgb(65, 65, 65);
+  border-radius: 3px;
+  padding-left: 9px;
+  padding-right: 9px;
+  text-decoration: none;
+}
+
+.paginator /deep/ .ngx-pagination a:focus, .ngx-pagination button:focus {
+  outline: none;
+  background: rgb(131, 131, 131);
+}
