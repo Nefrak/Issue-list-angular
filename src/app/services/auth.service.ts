@@ -31,8 +31,7 @@ export class AuthService {
     return this.subjectName.asObservable();
   }
 
-  checkUser()
-  {
+  checkUser() {
     this.subjectName.next(this.getUserName());
   }
 
@@ -41,24 +40,20 @@ export class AuthService {
     this.subjectLogin.next(this.isUserLoggedIn);
   }
 
-  checkTask()
-  {
+  checkTask() {
     this.subjectLogin.next(this.isUserLoggedIn);
   }
 
-  saveUser(userName: string, password: string)
-  {
+  saveUser(userName: string, password: string) {
     localStorage.setItem('userName', userName);
     localStorage.setItem('password', password);
   }
 
-  getUserName()
-  {
+  getUserName() {
     return localStorage.getItem('userName');
   }
 
-  getPassword()
-  {
+  getPassword() {
     return localStorage.getItem('password');
   }
 

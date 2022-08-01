@@ -31,6 +31,7 @@ export class IssueListComponent implements OnInit {
     this.getIssues();
   }
 
+  // get issue and apply selected filter
   getIssues() {
     this.issueService.getIssues().subscribe( data => this.issueEntries = data.filter(s => s.state.includes(this.filters[this.filter])) );
   }
@@ -55,10 +56,6 @@ export class IssueListComponent implements OnInit {
 
   compare(a: number | string, b: number | string, isAsc: boolean) {
     return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
-  }
-
-  issueRoute(id: number) {
-
   }
 
 }

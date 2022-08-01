@@ -39,25 +39,6 @@ export class IssueService {
   );
 }
 
-updateIssue(issue: Issue): Observable<Issue> {
-  return this.httpClient.put<Issue>(this.issueRestUrl + "/" + issue.id, issue, httpOptions)
-  .pipe(
-     retry(3),
-     catchError(this.httpErrorHandler)
-  );
-}
-
-deleteIssue(issue: Issue | number) : Observable<Issue> {
-  const id = typeof issue == 'number' ? issue : issue.id
-  const url = `${this.issueRestUrl}/${id}`;
-
-  return this.httpClient.delete<Issue>(url, httpOptions)
-  .pipe(
-     retry(3),
-     catchError(this.httpErrorHandler)
-  );
-}
-
  private httpErrorHandler (error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
        console.error("A client side error occurs. The error message is " + error.message);

@@ -9,5 +9,5 @@ There should be identification token and password shouldn't be saved in local st
 
 ## Issue-list-server
 Located in Issue-list-server folder.
-Run using command: npm run start
+Run using command in Issue-list-server repository: npm run start
 Create simple SQLite database and runs server.js. Server runs on port 8000 and returns data in JSON format.
